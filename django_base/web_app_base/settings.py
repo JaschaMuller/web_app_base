@@ -79,7 +79,8 @@ WSGI_APPLICATION = 'web_app_base.wsgi.application'
 DATABASES = {
     			'default':{
         			'ENGINE': 'django.contrib.gis.db.backends.postgis',	# Standard Name in django
-        			'NAME': 'mygis',					# Name of created db
+        			#'NAME': 'mygis',					# Name of created db
+                    'NAME': 'gis',					# Name of created db
         			'USER': 'sjm',						# Name of created user
         			'PASSWORD': '123',					# password for created user
         			#'HOST': 'db',						# name of docker container as specified in the docker-compose
