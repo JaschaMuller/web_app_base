@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',		        ## -> added - gis libraries installed (maybe geojson)
+    'leaflet',                          ## -> added - for leaflet
+    'geo_app'				            ## -> added - app created in the perivous stepp
 ]
 
 MIDDLEWARE = [
@@ -74,11 +77,17 @@ WSGI_APPLICATION = 'web_app_base.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+    			'default':{
+        			'ENGINE': 'django.contrib.gis.db.backends.postgis',	# Standard Name in django
+        			'NAME': 'mygis',					# Name of created db
+        			'USER': 'sjm',						# Name of created user
+        			'PASSWORD': '123',					# password for created user
+        			'HOST': 'db',						# name of docker container as specified in the docker-compose
+        			#'HOST': '192.168.99.100',				
+        			'PORT': '5432'						# port that the db is exposing
+    				}
+			    }
+
 
 
 # Password validation
