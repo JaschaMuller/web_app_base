@@ -82,8 +82,8 @@ DATABASES = {
         			'NAME': 'mygis',					# Name of created db
         			'USER': 'sjm',						# Name of created user
         			'PASSWORD': '123',					# password for created user
-        			'HOST': 'db',						# name of docker container as specified in the docker-compose
-        			#'HOST': '192.168.99.100',				
+        			#'HOST': 'db',						# name of docker container as specified in the docker-compose
+        			'HOST': '78.46.151.217',				
         			'PORT': '5432'						# port that the db is exposing
     				}
 			    }
