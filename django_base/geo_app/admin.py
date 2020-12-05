@@ -15,7 +15,7 @@ class WaterConsumptionAdmin(LeafletGeoAdmin):
 admin.site.register(WaterConsumption, WaterConsumptionAdmin)
 
 my_df = pd.read_pickle(r'/home/web_app_base/django_base/test_data/testData.pkl')
-'''
+
 for index, row in my_df.iterrows():
 
 	WaterConsumption(Id=index,
@@ -29,6 +29,4 @@ for index, row in my_df.iterrows():
 					 # DateTime=datetime.now(),
 					 geom=Point(float(row[7].replace(',','.')),
 					  			float(row[6].replace(',','.')))).save()
-                     #geom=Point(float(row[7]),
-					 # 			float(row[6]))).save()
-'''
+
