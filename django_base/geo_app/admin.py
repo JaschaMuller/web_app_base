@@ -26,6 +26,6 @@ for index, row in my_df.iterrows():
 					 PredictionAccuracy=0,
 					 Month=row[4],
 					 Year=row[5],
-					 # DateTime=datetime.now(),
+					 DateTime=datetime.now(),
 					 geom=Point(float(row[7].replace(',','.')),
 					 			float(row[6].replace(',','.')))).save()
