@@ -141,5 +141,5 @@ LEAFLET_CONFIG = {
     'MIN_ZOOM':3,
     'SCALE':'both',
     'ATTRIBUTION_PREFIX':'geo_ideas',
-    'TILES': [('Open Street Map', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'), {'maxZoom':20})]
+    'TILES': [('Open Street Map', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {'maxZoom':20})]
 }
