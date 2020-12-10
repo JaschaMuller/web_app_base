@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',		        ## -> added - gis libraries installed
     'leaflet',                          ## -> added - for leaflet
-    'djgeojson'                         ## -> geojson installed
+    'djgeojson',                         ## -> geojson installed
     'geo_app'				            ## -> added - app created in the perivous stepp
 ]
 
