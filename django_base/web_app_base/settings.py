@@ -89,7 +89,9 @@ DATABASES = {
         			'PORT': '5432'						# port that the db is exposing
     				}
 			    }
-
+SERIALIZATION_MODULES = {
+    'geojson':'djgeojson.serializers'
+}
 
 
 # Password validation
@@ -129,3 +131,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER':(-33.925, 18.625),
+    'DEFAULT_ZOOM':10,
+    'MAX_ZOOM':20,
+    'MIN_ZOOM':3,
+    'SCALE':'both',
+    'ATTRIBUTION_PREFIX':'geo_ideas',
+    'TILES': [('Open Street Map', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'), {'maxZoom':20})]
+}
