@@ -22,7 +22,7 @@ import django.contrib.auth.views
 from geo_app.models import WaterConsumption
 
 import geo_app.views
-from geo_app.views import waterconsumption_dataset, top10_consumers
+#from geo_app.views import waterconsumption_dataset, top10_consumers
 
 
 urlpatterns = [
