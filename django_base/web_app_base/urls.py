@@ -16,6 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf.urls import url
+import django.contrib.auth.views
+
+from geo_app.models import WaterConsumption
+
+import geo_app.views
+from geo_app.views import waterconsumption_dataset, top10_consumers
+
+
 urlpatterns = [
+    url(r'^$', geo_app.views.home, name='home'),
+    #url(r'^waterconsumption_data/$', waterconsumption_dataset, name='waterconsumption'),
+    #url(r'^top10_consumers/$', top10_consumers, name='top10consumers'),
     path('admin/', admin.site.urls),
 ]
