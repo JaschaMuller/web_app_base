@@ -26,7 +26,7 @@ SECRET_KEY = '$zc-zouxr1ztwg$8b42i4*(kty2tidxbf6&k8^e0%$70i!lp8j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.99.100', 'localhost', '127.0.0.1', '78.46.151.217']
+ALLOWED_HOSTS = ['192.168.99.100', 'localhost', '127.0.0.1', '78.46.151.217', '192.168.178.68']
 
 
 # Application definition
@@ -81,12 +81,13 @@ WSGI_APPLICATION = 'web_app_base.wsgi.application'
 DATABASES = {
     			'default':{
         			'ENGINE': 'django.contrib.gis.db.backends.postgis',	# Standard Name in django
-        			#'NAME': 'mygis',					# Name of created db
-                    'NAME': 'gis',					# Name of created db
-        			'USER': 'sjm',						# Name of created user
-        			'PASSWORD': '123',					# password for created user
+        			'NAME': 'eoed_webapp',					# Name of created db
+                    #'NAME': 'gis',					# Name of created db
+        			'USER': 'eoed',						# Name of created user
+        			'PASSWORD': 'userEOEDs2',					# password for created user
         			#'HOST': 'db',						# name of docker container as specified in the docker-compose
-        			'HOST': '78.46.151.217',				
+        			#'HOST': '78.46.151.217',				
+                    'HOST': '192.168.178.68',				
         			'PORT': '5432'						# port that the db is exposing
     				}
 			    }

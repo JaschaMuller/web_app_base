@@ -19,4 +19,5 @@ class WaterConsumption(models.Model):
     # Just metadata
     class Meta:
         verbose_name_plural = 'WaterConsumption'
+
 # Create your models here.
